@@ -1,0 +1,8 @@
+*.swp
+*.un~
+redis-sink_plugin.jar
+
+# Eclipse junk
+.classpath
+.externalToolBuilders/
+.project
