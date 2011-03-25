@@ -62,7 +62,7 @@ public class RedisSink extends EventSink.Base {
     
     try {
       jedis.select(this.db);
-      jedis.lpush(list, new String(e.getBody()));
+      jedis.rpush(list, new String(e.getBody()));
       this.jedisPool.returnResource(jedis);
     } finally {
       this.jedisPool.returnBrokenResource(jedis);
